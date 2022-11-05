@@ -1,0 +1,660 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "pp",
+      "guid": "b7d79902-83b5-4cc5-84b7-0577911b94d6",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "f00cd1bd-72f4-4eff-97c9-d7cd05cb1938"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 171,
+      "y": 342
+    },
+    {
+      "type": "response",
+      "name": "payprice",
+      "guid": "f00cd1bd-72f4-4eff-97c9-d7cd05cb1938",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "paybuy",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "9500f045-5ac9-4910-ae5c-29998e9d9d00"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b7d79902-83b5-4cc5-84b7-0577911b94d6"
+        }
+      ],
+      "x": 361,
+      "y": 337,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "paybuy",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sent",
+      "guid": "9500f045-5ac9-4910-ae5c-29998e9d9d00",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f00cd1bd-72f4-4eff-97c9-d7cd05cb1938"
+        }
+      ],
+      "x": 599,
+      "y": 372,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "0008FF",
+        "PayPal",
+        "",
+        "",
+        "",
+        "",
+        "Your grand total is **${tempVars.paybuy}** dollars USD. Please send the money to **simialiu20166@gmail.com** . Please send payment proof once the money has been sent. Thank you and have a good day!\n",
+        "https://1000logos.net/wp-content/uploads/2017/05/emblem-Paypal.jpg",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "pp2",
+      "guid": "17bb6b53-fcc8-4eca-86b6-acac5d0826c5",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "e7efd682-4f0f-4f8d-8731-f1698eca4012"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 157,
+      "y": 550
+    },
+    {
+      "type": "response",
+      "name": "payprice_1",
+      "guid": "e7efd682-4f0f-4f8d-8731-f1698eca4012",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "paybuy2",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f9415f55-0ced-44eb-b58d-7996882b2692"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "17bb6b53-fcc8-4eca-86b6-acac5d0826c5"
+        }
+      ],
+      "x": 358,
+      "y": 544,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "paybuy2",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sent_1",
+      "guid": "f9415f55-0ced-44eb-b58d-7996882b2692",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e7efd682-4f0f-4f8d-8731-f1698eca4012"
+        }
+      ],
+      "x": 549,
+      "y": 557,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "0008FF",
+        "PayPal",
+        "",
+        "",
+        "",
+        "",
+        "Your grand total is **${tempVars.paybuy2}** dollars USD. Please send the money to **xc.ol.q.22@gmail.com** . Please send payment proof once the money has been sent. Thank you and have a good day!\n",
+        "https://1000logos.net/wp-content/uploads/2017/05/emblem-Paypal.jpg",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "btc",
+      "guid": "ce824f19-2013-4c84-80cc-45366da80185",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "ab1a2059-c10f-4f34-adef-b6782a8552c4"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 110,
+      "y": 729
+    },
+    {
+      "type": "response",
+      "name": "payprice_1_1",
+      "guid": "ab1a2059-c10f-4f34-adef-b6782a8552c4",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "btcbuy",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "9b176a2f-97b1-416d-bf13-d61217ab758e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ce824f19-2013-4c84-80cc-45366da80185"
+        }
+      ],
+      "x": 305,
+      "y": 730,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "btcbuy",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sent_1_1",
+      "guid": "9b176a2f-97b1-416d-bf13-d61217ab758e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ab1a2059-c10f-4f34-adef-b6782a8552c4"
+        }
+      ],
+      "x": 502,
+      "y": 745,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFC812",
+        "BTC",
+        "",
+        "",
+        "",
+        "",
+        "Your grand total is **${tempVars.btcbuy}** dollars USD. Please send the money to **bc1qdlmlt9u2zmd7yx9eqzqt9y6evjvpy6fuaj983g** . Please send payment proof once the money has been sent. Thank you and have a good day!\n",
+        "https://1000logos.net/wp-content/uploads/2018/04/Color-Bitcoin-Logo.jpg",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "eth",
+      "guid": "c2167247-d0ec-4e11-80ff-988d3ec42fab",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "eac9fa5c-7948-41d0-8f31-79106150d587"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 103,
+      "y": 943
+    },
+    {
+      "type": "response",
+      "name": "payprice_1_1_1",
+      "guid": "eac9fa5c-7948-41d0-8f31-79106150d587",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "ethbuy",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "31e71e7d-a960-4c17-a289-dafd523fd141"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c2167247-d0ec-4e11-80ff-988d3ec42fab"
+        }
+      ],
+      "x": 312,
+      "y": 918,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "ethbuy",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sent_1_1_1",
+      "guid": "31e71e7d-a960-4c17-a289-dafd523fd141",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "eac9fa5c-7948-41d0-8f31-79106150d587"
+        }
+      ],
+      "x": 513,
+      "y": 920,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "CE08FF",
+        "ETH",
+        "",
+        "",
+        "",
+        "",
+        "Your grand total is **${tempVars.ethbuy}** dollars USD. Please send the money to **0x5c8201Dc75f94721Fba4a3037ae397487DbA577A** . Please send payment proof once the money has been sent. Thank you and have a good day!\n",
+        "https://seeklogo.com/images/E/ethereum-logo-EC6CDBA45B-seeklogo.com.png",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "cashapp",
+      "guid": "c1aa1669-f48d-4810-b21b-fb4d36196a8d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "675bfec7-06da-4525-94d8-980eb50aac15"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 139,
+      "y": 1170
+    },
+    {
+      "type": "response",
+      "name": "payprice_1_1_1_1",
+      "guid": "675bfec7-06da-4525-94d8-980eb50aac15",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "cashbuy",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f92fdde9-2ee1-4c7e-a1fd-ba5418b84dd8"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c1aa1669-f48d-4810-b21b-fb4d36196a8d"
+        }
+      ],
+      "x": 350,
+      "y": 1153,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "cashbuy",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sent_1_1_1_1",
+      "guid": "f92fdde9-2ee1-4c7e-a1fd-ba5418b84dd8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "675bfec7-06da-4525-94d8-980eb50aac15"
+        }
+      ],
+      "x": 551,
+      "y": 1163,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "55FF00",
+        "CashApp",
+        "",
+        "",
+        "",
+        "",
+        "Your grand total is **${tempVars.cashbuy}** dollars USD. Please send the money to **$Fu33yy** . Please send payment proof once the money has been sent. Thank you and have a good day!\n",
+        "https://1000logos.net/wp-content/uploads/2021/01/Cash-App-logo.png",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "customer",
+      "guid": "63306235-736c-4959-9568-aa2aa76eccad",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "82d9f50b-90e8-41a6-8f3e-4ae238b6a7f3"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 142,
+      "y": 1364
+    },
+    {
+      "type": "response",
+      "name": "getuser",
+      "guid": "82d9f50b-90e8-41a6-8f3e-4ae238b6a7f3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b3d916b5-66fd-4d23-9d31-96c30d927d32"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "63306235-736c-4959-9568-aa2aa76eccad"
+        }
+      ],
+      "x": 338,
+      "y": 1352,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "pingeduser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Addrole",
+      "guid": "b3d916b5-66fd-4d23-9d31-96c30d927d32",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "82d9f50b-90e8-41a6-8f3e-4ae238b6a7f3"
+        }
+      ],
+      "x": 522,
+      "y": 1371,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.pingeduser}",
+        "Customer"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}
